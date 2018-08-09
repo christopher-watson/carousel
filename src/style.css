@@ -31,9 +31,10 @@ a {
 .container {
   display: grid;
   width: 100vw;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: min-content .2fr 1fr;
   grid-template-areas:
     "nav"
+    "."
     "main"
 }
 
@@ -83,11 +84,87 @@ a {
 .main-div {
   grid-area: main;
   display: grid;
-}
-.pic {
-  width: 400px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: min-content;
+  grid-template-areas:
+    ". car ."
 }
 
+.carousel-div {
+  grid-area: car;
+  display: grid;
+  grid-template-rows: repeat(3, min-content);
+  grid-template-areas:
+    "top"
+    "mid"
+    "cta";
+  justify-items: center;
+}
+
+.top {
+  grid-area: top;
+}
+
+.pic-div {
+  grid-area: mid;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: 
+    "left-ar center-pic right-arr";
+  }
+  
+.inner-pic {
+  grid-area: center-pic;
+  margin: 0 10px;
+  position: relative;
+  
+}
+
+.pic-text {
+  position: absolute;
+  color: var(--white);
+  width: 70%;
+  text-align: center;
+  padding: 10px;
+  background-color: var(--opaque);
+  bottom: 5%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif
+}
+
+#left-arrow {
+  grid-area: left-ar;
+}
+
+
+
+#right-arrow {
+  grid-area: right-arr
+}
+
+.arrow{
+  font-size: 60px;
+  margin: auto 0;
+}
+
+.arrow:hover {
+ color: var(--opaque);
+}
+
+.pic {
+  width: 700px;
+}
+
+.cta-div {
+  grid-area: cta;
+  display: grid;
+  grid-template-areas: 
+    "icon text"
+}
 
 @media only screen and (max-width: 420px) { 
   .navbar {
