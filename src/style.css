@@ -1,9 +1,12 @@
  /* main */
  :root {
   --grey: #5D5D5D90;
-  --red: #FC0D1C;
-  --black: #161718;
-  --opaque: #16171880;
+  --red: #B80C09;
+  --blue: #134074;
+  --cyan: #01BAEF;
+  --ghost: #FBFBFF;
+  --black: #040F16;
+  --opaque: #040F1680;
   --white: #FFFFFF;
 }
 
@@ -46,7 +49,7 @@ a {
   grid-template-rows: min-content;
   grid-template-areas: 
     "name . icons";
-  background-color: var(--grey);
+  background-color: var(--ghost);
   box-shadow: 0 30px 40px 0px rgba(0, 0, 0, .25);
 }
 
@@ -84,7 +87,7 @@ a {
 .main-div {
   grid-area: main;
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: min-content;
   grid-template-areas:
     ". car ."
@@ -103,6 +106,7 @@ a {
 
 .top {
   grid-area: top;
+  margin-bottom: 20px;
 }
 
 .pic-div {
@@ -111,18 +115,24 @@ a {
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-areas: 
     "left-ar center-pic right-arr";
+  border-radius: 50px;
+  background: var(--opaque); 
+  background: -webkit-linear-gradient(to right, #fff, var(--red), #fff);
+  background: linear-gradient(to right, #fff, var(--red), #fff); 
+  
+
+
   }
   
 .inner-pic {
   grid-area: center-pic;
   margin: 0 10px;
   position: relative;
-  
 }
 
 .pic-text {
   position: absolute;
-  color: var(--white);
+  color: var(--ghost);
   width: 70%;
   text-align: center;
   padding: 10px;
@@ -138,12 +148,13 @@ a {
 
 #left-arrow {
   grid-area: left-ar;
+  text-align: right;
+  margin-right: 10px;
 }
 
-
-
 #right-arrow {
-  grid-area: right-arr
+  grid-area: right-arr;
+  margin-left: 10px;
 }
 
 .arrow{
@@ -156,15 +167,39 @@ a {
 }
 
 .pic {
-  width: 700px;
+  width: 100%;
+  height: 100%;
 }
 
 .cta-div {
   grid-area: cta;
   display: grid;
   grid-template-areas: 
-    "icon text"
+    "icon text";
+  background: var(--black);
+  margin-top: 20px;
+  padding: 0 20px;
+  border-radius: 25px;
+  color: white;
 }
+
+.cta-div:hover{
+  background: var(--opaque);
+  cursor: pointer;
+}
+
+.cta-icon-div {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+}
+
+.cta-text-div {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+
 
 @media only screen and (max-width: 420px) { 
   .navbar {
