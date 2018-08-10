@@ -85,7 +85,7 @@ numberHandler = () => {
 }
 
 
-document.onclick = function () {arrowHandler(), numberHandler(), changeBack(), console.log(picIndex, (images.length-1))};
+document.onclick = function () {arrowHandler(), numberHandler(), changeBack()};
 document.addEventListener('DOMContentLoaded', function (e) {
   arrowHandler();
   numberHandler();
