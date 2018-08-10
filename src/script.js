@@ -32,7 +32,7 @@ for (let i = 0; i < picSelector.length; i++) {
 }
 
 changeBack = () => {
-  document.body.style.backgroundImage = `url(../assets/img/img${picIndex+1}.jpg)`;
+  document.body.style.backgroundImage = `url(./assets/img/img${picIndex+1}.jpg)`;
 }
 
 prevPic = () => {
