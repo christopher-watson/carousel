@@ -21,7 +21,10 @@ body {
   margin: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 15px;
-  color: black;
+  color: var(--ghost);
+  background-color: #282c34;
+  background-image: url('../assets/img/img1.jpg'); 
+  background-blend-mode: multiply;
 }
 
 ul {
@@ -51,12 +54,13 @@ a {
   grid-template-rows: min-content;
   grid-template-areas: 
     "name . icons";
+  z-index: 5;
 }
 
 .name-div {
   grid-area: name;
   padding: 0 10px;
-  margin: auto;
+  margin: auto auto auto 5px;
   font-family: 'Vesper Libre', 'Times New Roman', serif;
   font-size: 28px;
 }
@@ -76,12 +80,11 @@ a {
 }
 
 .icon{
-  color: var(--black);
-  /* box-shadow: 5px 5px 5px red; */
+  color: var(--ghost);
 }
 
 .icon:hover{
-  color: var(--opaque);
+  color: var(--ebony);
 }
 
 /* main */
@@ -164,7 +167,7 @@ a {
 }
 
 .arrow:hover {
- color: var(--opaque);
+ color: var(--ebony);
 }
 
 .pic {
@@ -203,7 +206,7 @@ a {
   margin-top: 20px;
   padding: 0 20px;
   border-radius: 25px;
-  color: white;
+  color: var(--ghost);
 }
 
 .cta-div:hover{
