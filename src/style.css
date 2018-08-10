@@ -126,11 +126,27 @@ a {
 .inner-pic {
   grid-area: center-pic;
   position: relative;
+  /* display: inline-block; */
 }
 
 .pic {
   border-radius: 50px 50px 0 0;
-  display: block;
+  display: block !important;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+
+[state=hidden] {
+  opacity: 0;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
+}
+
+[state=active] {
+  opacity: 1;
+  transition: opacity .5s;
+  -webkit-transition: opacity .5s;
 }
 
 .pic-text {
@@ -164,15 +180,11 @@ a {
 .arrow{
   font-size: 60px;
   margin: auto 0;
+  background: none;
 }
 
 .arrow:hover {
- color: var(--ebony);
-}
-
-.pic {
-  width: 100%;
-  height: 100%;
+  color: var(--ebony);
 }
 
 .pic-select {
@@ -203,7 +215,7 @@ a {
   grid-template-areas: 
     "icon text";
   background: var(--black);
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 0 20px;
   border-radius: 25px;
   color: var(--ghost);
