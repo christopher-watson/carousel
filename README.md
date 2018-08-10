@@ -4,7 +4,7 @@ _Christopher Watson_
 
 A full screen carosuel
 
-[Check it out](http://christopherwatson.co/carousel/)
+[Check it out](http://christopherwatson.co/carousel-a/)
 
 * Images were taken by Christopher Watson
 
