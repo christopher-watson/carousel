@@ -43,41 +43,50 @@
       <div class="carousel-div">
         <!-- pic number etc -->
         <div class="top">
-          <div class="pic-num"><span id="pic-num-span">1/3</span></div>
+          <div class="pic-num"><span id="pic-num-span">1</span> / <span id="total-pic-num-span">5</span></div>
         </div>
         <div class="pic-div">
-          <i class="fas fa-chevron-circle-left arrow" id="left-arrow"></i>
-          <i class="fas fa-chevron-circle-right arrow" id="right-arrow"></i>
+          <i class="fas fa-chevron-circle-left arrow" id="left-arrow" title="Previous"></i>
+          <i class="fas fa-chevron-circle-right arrow" id="right-arrow" title="Next"></i>
           <div class="inner-pic">
-            <img class="pic" src="./../assets/img/img1.jpg">
-            <div class="pic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-          </div>
-          <!-- <div class="inner-pic">
-            <img class="pic" src="./../assets/img/img2.jpg">
+            <img class="pic" id="pic1" num="0" state="active" src="./../assets/img/img1.jpg">
             <div class="pic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
           </div>
           <div class="inner-pic">
-            <img class="pic" src="./../assets/img/img3.jpg">
+            <img class="pic" id="pic2" num="1"state="hidden" src="./../assets/img/img2.jpg">
             <div class="pic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
           </div>
           <div class="inner-pic">
-            <img class="pic" src="./../assets/img/img4.jpg">
+            <img class="pic" id="pic3" num="2" state="hidden" src="./../assets/img/img3.jpg">
             <div class="pic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
           </div>
           <div class="inner-pic">
-            <img class="pic" src="./../assets/img/img5.jpg">
+            <img class="pic" id="pic4" num="3" state="hidden" src="./../assets/img/img4.jpg">
             <div class="pic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-          </div> -->
+          </div>
+          <div class="inner-pic">
+            <img class="pic" id="pic5" num="4" state="hidden" src="./../assets/img/img5.jpg">
+            <div class="pic-text">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
+          </div>
+          <div class="pic-select">
+            <div class="dot hover" id="0"></div>
+            <div class="dot hover" id="1"></div>
+            <div class="dot hover" id="2"></div>
+            <div class="dot hover" id="3"></div>
+            <div class="dot hover" id="4"></div>
+          </div>
         </div>
         <!-- cta  -->
-        <div class="cta-div">
-          <div class="cta-icon-div">
-            <i class="fas fa-code" id="cta-icon"></i> 
+        <a href="https://www.github.com/christopher-watson/carousel" target="_blank" title="GitHub Repo">
+          <div class="cta-div">
+            <div class="cta-icon-div">
+              <i class="fas fa-code" id="cta-icon"></i> 
+            </div>
+            <div class="cta-text-div">
+              <p id="cta-text">Check out the code!</p>
+            </div>
           </div>
-          <div class="cta-text-div">
-            <p id="cta-text">Check out the code!</p>
-          </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
