@@ -1,4 +1,4 @@
-# carousel
+# Carousel
 
 _Christopher Watson_
 

@@ -23,7 +23,7 @@ body {
   font-size: 15px;
   color: var(--ghost);
   background-color: #282c34;
-  background-image: url('./assets/img/img1.jpg'); 
+  background-image: url('./../assets/img/img1.jpg'); 
   background-blend-mode: multiply;
 }
 
