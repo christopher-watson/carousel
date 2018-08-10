@@ -24,6 +24,8 @@ body {
   color: var(--ghost);
   background-color: #282c34;
   background-image: url('./../assets/img/img1.jpg'); 
+  background-position: center;
+  background-size: cover;
   background-blend-mode: multiply;
 }
 
@@ -116,7 +118,8 @@ a {
 .pic-div {
   grid-area: mid;
   display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-columns: minmax(300px 1fr) 5fr minmax(300px 1fr);
+  /* grid-template-columns: 1fr 5fr 1fr; */
   grid-template-rows: repeat(2, min-content);
   grid-template-areas: 
     "left-ar center-pic right-arr"
@@ -139,14 +142,14 @@ a {
 
 [state=hidden] {
   opacity: 0;
-  transition: opacity .5s;
-  -webkit-transition: opacity .5s;
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
 }
 
 [state=active] {
   opacity: 1;
-  transition: opacity .5s;
-  -webkit-transition: opacity .5s;
+  transition: opacity .7s;
+  -webkit-transition: opacity .7s;
 }
 
 .pic-text {
@@ -169,7 +172,8 @@ a {
   grid-area: left-ar;
   text-align: right;
   margin-right: 10px;
-  display: none;
+  /* width: 100%; */
+  /* display: none; */
 }
 
 #right-arrow {
@@ -185,6 +189,10 @@ a {
 
 .arrow:hover {
   color: var(--ebony);
+}
+
+[disabled=true] {
+  visibility: hidden;
 }
 
 .pic-select {
@@ -271,6 +279,11 @@ a {
 
 }
 
+@media only screen and (max-width: 800px){
+      .arrow:hover {
+      color: var(--ghost);
+    }
+}
 
 @media only screen and (max-width: 700px) { 
   .navbar {
@@ -301,7 +314,6 @@ a {
       grid-area: left-ar;
       text-align: right;
       margin-left: 100px;
-      display: none;
     }
     
     #right-arrow {
