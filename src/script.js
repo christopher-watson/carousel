@@ -1,8 +1,8 @@
 const leftArrow = document.getElementById('left-arrow');
-leftArrow.onclick = function () {prevPic()};
+leftArrow.onclick = function () {arrowHandler(), prevPic()};
 
 const rightArrow = document.getElementById('right-arrow');
-rightArrow.onclick = function () {nextPic()};
+rightArrow.onclick = function () {arrowHandler(), nextPic()};
 
 const photoNum = document.getElementById('pic-num-span');
 const totalPhotos = document.getElementById('total-pic-num-span');
@@ -50,7 +50,7 @@ prevPic = () => {
 }
 
 nextPic = () => {
-  for(let i = 0; i < images.length; i++) {
+  for(let i = 0; i < (images.length+1); i++) {
     if(images[picIndex].attributes.state.value === 'active'){
       images[picIndex+1].attributes.state.value = 'active';
       images[picIndex+1].style.opacity = 1;
@@ -65,17 +65,18 @@ nextPic = () => {
 
 arrowHandler = () => {
   if(picIndex == 0){
-    leftArrow.style.display = 'none';
-    rightArrow.style.display = 'block';
+    leftArrow.attributes.disabled.value = true;
+    rightArrow.attributes.disabled.value = false;
     picSelector[0].style.background = '#01baef'
   }
   if(picIndex > 0){
-    leftArrow.style.display = 'block';
-    rightArrow.style.display = 'block';
+    leftArrow.attributes.disabled.value = false;
+    rightArrow.attributes.disabled.value = false;
   }
   if(picIndex == images.length-1){
-    rightArrow.style.display = 'none';
+    rightArrow.attributes.disabled.value = true;
   }
+
 }
 
 numberHandler = () => {
@@ -84,7 +85,7 @@ numberHandler = () => {
 }
 
 
-document.onclick = function () {arrowHandler(), numberHandler(), changeBack()};
+document.onclick = function () {arrowHandler(), numberHandler(), changeBack(), console.log(picIndex, (images.length-1))};
 document.addEventListener('DOMContentLoaded', function (e) {
   arrowHandler();
   numberHandler();
