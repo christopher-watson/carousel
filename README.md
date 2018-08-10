@@ -8,5 +8,5 @@ A full screen carosuel
 
 * Images were taken by Christopher Watson
 
-![Carousel](https://github.com/christopher-watson/trivia-game/blob/master/assets/images/tviKylNUZb.gif?raw=true "Jeopardy")
+<!-- ![Carousel](https://github.com/christopher-watson/trivia-game/blob/master/assets/images/tviKylNUZb.gif?raw=true "Jeopardy") -->
 
