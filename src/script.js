@@ -25,6 +25,13 @@ for (let i = 0; i < picSelector.length; i++) {
   });
 }
 
+// const container = document.getElementsByClassName('container')
+changeBack = () => {
+  document.body.style.backgroundImage = `url(../assets/img/img${picIndex+1}.jpg)`;
+
+}
+
+
 const photoNum = document.getElementById('pic-num-span');
 const totalPhotos = document.getElementById('total-pic-num-span');
 
@@ -32,7 +39,7 @@ let picIndex = 0;
 
 const images = document.getElementsByClassName('pic');
 
-document.onclick = function () {arrowHandler(), numberHandler()};
+document.onclick = function () {arrowHandler(), numberHandler(), changeBack()};
 
 prevPic = () => {
   for(let i = 0; i < images.length; i++) {
