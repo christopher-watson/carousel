@@ -25,10 +25,9 @@ body {
   background-color: #282c34;
   background-image: url('./../assets/img/img1.jpg'); 
   background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
+  /* background-position: center; */
+  /* background-size: cover; */
   background-repeat: no-repeat;
-  /* background-attachment: scroll; */
 }
 
 ul {
